@@ -1,13 +1,11 @@
-const favoriteBooks = [
-  { id: 1, title: "Things Fall Apart", author: "Chinua Achebe" },
-  { id: 2, title: "Half of a Yellow Sun", author: "Chimamanda Ngozi Adichie" },
-  { id: 3, title: "Born a Crime", author: "Trevor Noah" },
-];
+import { getFavorites } from "./favorites.js";
 
 const list = document.querySelector("#favorites-list");
 const emptyMessage = document.querySelector("#empty-message");
 
 function renderFavorites() {
+  const favoriteBooks = getFavorites();
+
   list.innerHTML = "";
 
   if (favoriteBooks.length === 0) {
