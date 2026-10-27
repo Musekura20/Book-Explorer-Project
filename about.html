@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Book Explorer</title>
+  </head>
+  <body class="min-h-screen bg-ivory text-espresso">
+    <header class="bg-burgundy shadow">
+      <nav
+        class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 py-4 sm:flex-row sm:justify-between"
+      >
+        <a href="/index.html" class="text-xl font-bold text-ivory"
+          >Book Explorer</a
+        >
+
+        <ul class="flex gap-6 text-ivory">
+          <li>
+            <a href="/index.html" class="hover:text-rose hover:underline"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="/favorites.html" class="hover:text-rose hover:underline"
+              >Favorites</a
+            >
+          </li>
+          <li>
+            <a href="/about.html" class="hover:text-rose hover:underline"
+              >About</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex-1">
+      <section class="mx-auto max-w-3xl px-4 py-12">
+        <h1 class="text-3xl font-bold text-espresso">About Book Explorer</h1>
+        <p class="mt-4 text-espresso/80">
+          Book Explorer is a small web app that helps you find books and save
+          your favorites.
+        </p>
+
+        <h2 class="mt-8 text-xl font-bold text-burgundy">What you can do</h2>
+        <ul class="mt-2 list-disc space-y-1 pl-6 text-espresso/80">
+          <li>Browse books from the Open Library</li>
+          <li>Search for a book by title</li>
+          <li>Save books to your favorites (they stay after you refresh)</li>
+        </ul>
+
+        <h2 class="mt-8 text-xl font-bold text-burgundy">Built with</h2>
+        <ul class="mt-2 list-disc space-y-1 pl-6 text-espresso/80">
+          <li>HTML and Tailwind CSS</li>
+          <li>JavaScript (ES6 modules, fetch, localStorage)</li>
+          <li>Vite</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="bg-espresso text-ivory">
+      <div
+        class="border-t border-ivory/20 py-6 text-center text-sm text-ivory/70"
+      >
+        &copy; 2026 Book Explorer. All rights reserved.
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/home-page.js"></script>
+  </body>
+</html>

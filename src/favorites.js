@@ -1,8 +1,24 @@
-let favorites = [
-  { id: 1, title: "Things Fall Apart", author: "Chinua Achebe" },
-  { id: 2, title: "Half of a Yellow Sun", author: "Chimamanda Ngozi Adichie" },
-  { id: 3, title: "Born a Crime", author: "Trevor Noah" },
-];
+const STORAGE_KEY = "bookExplorerFavorites";
+
+function loadFavorites() {
+  const saved = localStorage.getItem(STORAGE_KEY);
+
+  if (saved === null) {
+    return [];
+  }
+
+  try {
+    return JSON.parse(saved);
+  } catch {
+    return [];
+  }
+}
+
+function saveFavorites() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites));
+}
+
+let favorites = loadFavorites();
 
 export function getFavorites() {
   return favorites;
@@ -17,8 +33,10 @@ export function addFavorite(book) {
     return;
   }
   favorites.push(book);
+  saveFavorites();
 }
 
 export function removeFavorite(id) {
   favorites = favorites.filter((book) => book.id !== id);
+  saveFavorites();
 }

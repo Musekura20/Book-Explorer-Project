@@ -14,7 +14,14 @@ const sampleBooks = [
 const grid = document.querySelector("#books-grid");
 
 function updateButton(button, id) {
-  button.textContent = isFavorite(id) ? "Remove from favorites" : "Add to favorites";
+  const saved = isFavorite(id);
+
+  button.textContent = saved ? "Saved to favorites" : "Add to favorites";
+
+  button.classList.toggle("bg-burgundy", !saved);
+  button.classList.toggle("text-ivory", !saved);
+  button.classList.toggle("bg-rose", saved);
+  button.classList.toggle("text-burgundy", saved);
 }
 
 function renderBooks() {
@@ -28,7 +35,7 @@ function renderBooks() {
       <div class="p-4">
         <h3 class="font-bold text-espresso">${book.title}</h3>
         <p class="text-sm text-espresso/70">${book.author}</p>
-        <button class="mt-4 w-full rounded-full bg-burgundy py-2 text-sm font-semibold text-ivory hover:bg-burgundy/90"></button>
+        <button class="mt-4 w-full rounded-full py-2 text-sm font-semibold hover:opacity-90"></button>
       </div>
     `;
 
