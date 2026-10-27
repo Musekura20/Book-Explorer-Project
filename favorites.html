@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Favorites | Book Explorer</title>
+  </head>
+  <body class="flex min-h-screen flex-col bg-ivory text-espresso">
+
+    <!-- COPY your <header>...</header> from index.html here -->
+     <header class="bg-burgundy shadow">
+      <nav
+        class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 py-4 sm:flex-row sm:justify-between"
+      >
+        <a href="/index.html" class="text-xl font-bold text-ivory"
+          >Book Explorer</a
+        >
+
+        <ul class="flex gap-6 text-ivory">
+          <li>
+            <a href="/index.html" class="hover:text-rose hover:underline"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="/favorites.html" class="hover:text-rose hover:underline"
+              >Favorites</a
+            >
+          </li>
+          <li>
+            <a href="/about.html" class="hover:text-rose hover:underline"
+              >About</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex-1">
+      <section class="mx-auto max-w-6xl px-4 py-12">
+        <h1 class="text-3xl font-bold text-espresso">My Favorites</h1>
+        <p class="mt-1 text-espresso/70">Books you saved for later.</p>
+
+        <p id="empty-message" class="mt-8 hidden rounded-xl bg-rose/30 p-6 text-center">
+          You have no favorite books yet.
+        </p>
+
+        <div id="favorites-list" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        </div>
+      </section>
+    </main>
+
+    <!-- COPY your <footer>...</footer> from index.html here -->
+     <footer class="bg-espresso text-ivory">
+      <div
+        class="border-t border-ivory/20 py-6 text-center text-sm text-ivory/70"
+      >
+        &copy; 2026 Book Explorer. All rights reserved.
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/favorites-page.js"></script>
+  </body>
+</html>
