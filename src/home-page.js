@@ -64,13 +64,19 @@ async function loadBooks(query = "fiction") {
         grid.innerHTML = "";
 
         if (books.length === 0) {
-            grid.innerHTML = `
-                <p class="col-span-full text-center text-espresso/70">
-                    No books found. Try another title.
-                </p>
-            `;
-            return;
-        }
+    grid.innerHTML = `
+        <div class="col-span-full py-12 text-center">
+            <h2 class="text-xl font-bold text-espresso">
+                No books found
+            </h2>
+            <p class="mt-2 text-espresso/70">
+                We couldn't find any books matching your search.
+                Try another title or check your spelling.
+            </p>
+        </div>
+    `;
+    return;
+}
 
         books.forEach((book) => {
             grid.appendChild(createCard(book));
