@@ -102,6 +102,7 @@ searchForm.addEventListener("submit", (event) => {
     }
 
     loadBooks(query);
+    searchInput.value = "";
 });
 
 loadBooks();
