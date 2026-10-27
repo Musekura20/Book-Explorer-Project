@@ -1,4 +1,4 @@
-import { getFavorites } from "./favorites.js";
+import { getFavorites, removeFavorite } from "./favorites.js";
 
 const list = document.querySelector("#favorites-list");
 const emptyMessage = document.querySelector("#empty-message");
@@ -28,6 +28,13 @@ function renderFavorites() {
         </button>
       </div>
     `;
+
+    const removeButton = card.querySelector("button");
+    removeButton.addEventListener("click", () => {
+      removeFavorite(book.id);
+      renderFavorites();
+    });
+
     list.appendChild(card);
   });
 }
