@@ -3,8 +3,8 @@
 @custom-variant hover (&:hover);
 
 @theme {
-  --color-forest: #244B3C;
-  --color-cream: #F7F2E8;
-  --color-sand: #D8C3A5;
-  --color-gold: #C58B48;
+  --color-burgundy: #702D3A;
+  --color-ivory: #FFF9F0;
+  --color-rose: #D8B9A5;
+  --color-espresso: #382B29;
 }

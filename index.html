@@ -1,16 +1,49 @@
-<body class="min-h-screen bg-cream text-forest">
+<body class="min-h-screen bg-ivory text-espresso">
 
-  <header class="bg-forest shadow">
+  <header class="bg-burgundy shadow">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-      <a href="/index.html" class="text-xl font-bold text-cream">Book Explorer</a>
+      <a href="/index.html" class="text-xl font-bold text-ivory">Book Explorer</a>
 
-      <ul class="flex gap-6 text-sand">
-        <li><a href="/index.html" class="hover:text-gold">Home</a></li>
-        <li><a href="/favorites.html" class="hover:text-gold">Favorites</a></li>
-        <li><a href="/about.html" class="hover:text-gold">About</a></li>
+      <ul class="flex gap-6 text-ivory">
+        <li><a href="/index.html" class="hover:text-rose hover:underline">Home</a></li>
+        <li><a href="/favorites.html" class="hover:text-rose hover:underline">Favorites</a></li>
+        <li><a href="/about.html" class="hover:text-rose hover:underline">About</a></li>
       </ul>
     </nav>
   </header>
+
+  <main>
+    <section class="bg-ivory">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 md:grid-cols-2">
+
+        <div>
+          <p class="border-l-4 border-burgundy pl-3 text-sm font-semibold uppercase tracking-widest text-espresso">
+            Your online library
+          </p>
+          <h1 class="mt-4 text-4xl font-bold leading-tight text-espresso md:text-5xl">
+            Find your next favorite book
+          </h1>
+          <p class="mt-4 text-lg text-espresso/80">
+            Search thousands of books, learn about them, and save the ones you love.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#books" class="rounded-full bg-burgundy px-6 py-3 font-semibold text-ivory hover:bg-burgundy/90">
+              Explore books
+            </a>
+            <a href="/favorites.html" class="rounded-full border-2 border-burgundy px-6 py-3 font-semibold text-burgundy hover:bg-rose">
+              My favorites
+            </a>
+          </div>
+        </div>
+
+        <div class="flex h-72 items-center justify-center rounded-2xl bg-rose text-espresso md:h-96">
+          Image goes here
+        </div>
+
+      </div>
+    </section>
+  </main>
 
   <script type="module" src="/src/main.js"></script>
 </body>
