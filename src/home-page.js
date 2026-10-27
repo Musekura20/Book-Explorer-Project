@@ -2,7 +2,8 @@ import { addFavorite, removeFavorite, isFavorite } from "./favorites.js";
 import { fetchBooks } from "./fetchBooks.js";
 
 const grid = document.querySelector("#books-grid");
-
+const searchForm = document.querySelector("#search-form");
+const searchInput = document.querySelector("#search-input");
 
 function updateButton(button, id) {
   if (isFavorite(id)) {
@@ -49,17 +50,55 @@ function createCard(book) {
   return card;
 }
 
-async function loadBooks() {
-  grid.innerHTML = `<p class="col-span-full text-center">Loading books...</p>`;
+
+async function loadBooks(query = "fiction") {
+  grid.innerHTML = `
+    <p class="col-span-full text-center">Loading books...</p>
+  `;
 
   try {
-    const books = await fetchBooks("fiction");
+    const books = await fetchBooks(query);
+
     grid.innerHTML = "";
-    books.forEach((book) => grid.appendChild(createCard(book)));
+
+    if (books.length === 0) {
+      grid.innerHTML = `
+        <p class="col-span-full text-center">
+          No books found. Try another title.
+        </p>
+      `;
+      return;
+    }
+
+    books.forEach((book) => {
+      grid.appendChild(createCard(book));
+    });
   } catch (error) {
     console.error(error);
-    grid.innerHTML = `<p class="col-span-full text-center">Could not load books. Please try again.</p>`;
+
+    grid.innerHTML = `
+      <p class="col-span-full text-center">
+        Could not load books. Please try again.
+      </p>
+    `;
   }
 }
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const query = searchInput.value.trim();
+
+  if (query === "") {
+    grid.innerHTML = `
+      <p class="col-span-full text-center">
+        Please enter a book title to search.
+      </p>
+    `;
+    return;
+  }
+
+  loadBooks(query);
+});
 
 loadBooks();

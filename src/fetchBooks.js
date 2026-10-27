@@ -1,7 +1,7 @@
 const BASE_URL = "https://openlibrary.org/search.json";
 
 export async function fetchBooks(query = "fiction", limit = 12) {
-  const url = `${BASE_URL}?q=${encodeURIComponent(query)}&limit=${limit}&fields=key,title,author_name,cover_i,first_publish_year`;
+  const url = `${BASE_URL}?title=${encodeURIComponent(query)}&limit=${limit}&fields=key,title,author_name,cover_i,first_publish_year`;
 
   const response = await fetch(url);
 

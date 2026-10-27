@@ -84,12 +84,27 @@
           <h2 class="text-2xl font-bold text-espresso">Featured books</h2>
           <p class="mt-1 text-espresso/70">Real books will appear here soon.</p>
 
+          <form id="search-form" class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Search books by title..."
+              aria-label="Search books by title"
+              class="min-w-0 flex-1 rounded-lg border border-rose bg-white px-4 py-3 text-espresso"
+            />
+
+            <button
+              type="submit"
+              class="rounded-lg bg-burgundy px-6 py-3 font-semibold text-ivory hover:bg-burgundy/90"
+            >
+              Search
+            </button>
+          </form>
+
           <div
             id="books-grid"
             class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-          >
-            
-          </div>
+          ></div>
         </div>
       </section>
     </main>
