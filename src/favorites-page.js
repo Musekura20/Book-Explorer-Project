@@ -33,6 +33,10 @@ function createCard(book) {
   author.className = "text-sm text-espresso/70";
   author.textContent = book.author;
 
+  const year = document.createElement("p");
+  year.className = "mt-1 text-sm text-espresso/70";
+  year.textContent = book.year ? `Published: ${book.year}` : "";
+
   const button = document.createElement("button");
   button.textContent = "Remove from favorites";
   button.className =
@@ -43,7 +47,13 @@ function createCard(book) {
     renderFavorites();
   });
 
-  content.append(title, author, button);
+  content.append(title, author);
+
+if (book.year) {
+  content.appendChild(year);
+}
+
+content.appendChild(button);
   card.appendChild(content);
 
   return card;
