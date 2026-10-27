@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@custom-variant hover (&:hover);
+
+@theme {
+  --color-forest: #244B3C;
+  --color-cream: #F7F2E8;
+  --color-sand: #D8C3A5;
+  --color-gold: #C58B48;
+}
