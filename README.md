@@ -4,7 +4,7 @@ Book Explorer is a responsive web app for finding books and saving your favorite
 
 Built as the capstone project for **Responsive & Interactive Web App Development** (HTML, Tailwind CSS, JavaScript, async API calls, ES6 modules, GitHub workflow).
 
-**Live limk:** [book-explorer-project.inezaespe03.workers.de]
+**Live limk:** [https://book-explorer-project.inezaespe03.workers.dev/]
 **Repository:** [https://github.com/Musekura20/Book-Explorer-Project]
 
 ---
